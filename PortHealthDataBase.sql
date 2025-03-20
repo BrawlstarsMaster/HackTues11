@@ -13,6 +13,7 @@ CREATE TABLE patient_data (
     height DECIMAL(5,2),
     weight DECIMAL(5,2),
     diet TEXT,
+    allergies TEXT,
     last_visit TIMESTAMP,
     visit_reason TEXT
 );
