@@ -7,8 +7,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
-    private EditText editTextName, editTextSurname, editTextPhone, editTextEmail;
+public class SignupActivity extends AppCompatActivity {
+    private EditText editTextName, editTextSurname, editTextPhone, editTextEmail, editTextPassword;
     private Button buttonSubmit;
 
     @Override
@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         editTextSurname = findViewById(R.id.editTextSurname);
         editTextPhone = findViewById(R.id.editTextPhone);
         editTextEmail = findViewById(R.id.editTextEmail);
+        editTextPassword = findViewById(R.id.editTextPassword);
         buttonSubmit = findViewById(R.id.buttonSubmit);
 
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
@@ -29,11 +30,12 @@ public class MainActivity extends AppCompatActivity {
                 String surname = editTextSurname.getText().toString().trim();
                 String phone = editTextPhone.getText().toString().trim();
                 String email = editTextEmail.getText().toString().trim();
+                String password = editTextPassword.getText().toString().trim();
 
                 if (name.isEmpty() || surname.isEmpty() || phone.isEmpty() || email.isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(MainActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
