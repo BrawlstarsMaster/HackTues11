@@ -9,8 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Port_health">
 
-        <!-- Set LoginActivity as the first screen -->
-        <activity android:name=".LoginActivity"
+        <activity android:name=".InitialStartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,8 +17,8 @@
             </intent-filter>
         </activity>
 
-        <!-- Register SignupActivity -->
         <activity android:name=".SignupActivity"/>
+        <activity android:name=".LoginActivity" />
 
         <!-- Register MainActivity -->
         <activity android:name=".MainActivity"/>
