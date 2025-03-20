@@ -78,3 +78,8 @@ ADD created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
 ALTER TABLE prescriptions 
 ADD instructions TEXT;
 
+ALTER TABLE users ADD age INT;
+
+ALTER TABLE users ADD gender VARCHAR(10);
+
+
