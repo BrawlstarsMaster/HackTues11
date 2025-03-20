@@ -1,0 +1,20 @@
+CREATE TABLE doctor_visits (
+    id SERIAL PRIMARY KEY,
+    patient_id VARCHAR(255) NOT NULL,
+    diagnosis TEXT NOT NULL,
+    visit_cost DECIMAL(10,2),
+    need_followup BOOLEAN NOT NULL,
+    followup_date DATE,
+    recovery_notes TEXT,
+    preparations TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE prescriptions (
+    id SERIAL PRIMARY KEY,
+    visit_id INTEGER REFERENCES doctor_visits(id) ON DELETE CASCADE,
+    medicine VARCHAR(255) NOT NULL,
+    dosage VARCHAR(50) NOT NULL,
+    frequency VARCHAR(50) NOT NULL,
+    duration VARCHAR(50) NOT NULL
+);
