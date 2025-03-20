@@ -7,10 +7,10 @@
         android:label="Port Health"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Port_health">  <!-- FIXED: Closing '>' added here -->
+        android:theme="@style/Theme.Port_health">
 
         <!-- Set LoginActivity as the first screen -->
-        <activity android:name=".SignupActivity"
+        <activity android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +19,7 @@
         </activity>
 
         <!-- Register SignupActivity -->
-        <activity android:name=".LoginActivity"/>
+        <activity android:name=".SignupActivity"/>
 
         <!-- Register MainActivity -->
         <activity android:name=".MainActivity"/>

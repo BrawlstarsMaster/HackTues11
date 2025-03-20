@@ -32,10 +32,10 @@ public class SignupActivity extends AppCompatActivity {
                 String email = editTextEmail.getText().toString().trim();
                 String password = editTextPassword.getText().toString().trim();
 
-                if (name.isEmpty() || surname.isEmpty() || phone.isEmpty() || email.isEmpty()) {
+                if (name.isEmpty() || surname.isEmpty() || phone.isEmpty() || email.isEmpty() || password.isEmpty()) {
                     Toast.makeText(SignupActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(SignupActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupActivity.this, "Sign up Successful!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
