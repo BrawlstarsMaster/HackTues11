@@ -71,3 +71,10 @@ ALTER TABLE appointments ADD external_booking_link TEXT;
 
 INSERT INTO appointments (patient_id, doctor_id, appointment_time, external_booking_link, status) 
 VALUES (1, 2, '2025-04-01 10:00:00', 'https://superdoc.com/confirm/12345', 'scheduled');
+
+ALTER TABLE medical_history 
+ADD created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+
+ALTER TABLE prescriptions 
+ADD instructions TEXT;
+
